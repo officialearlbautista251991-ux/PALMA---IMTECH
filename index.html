@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PALMA IMTECH — Reliable Fast Fiber Internet | Midsayap, Cotabato</title>
+    <style>
+        * {margin:0; padding:0; box-sizing:border-box; font-family:Arial, sans-serif;}
+        :root {
+            --green:#00a800; --darkgreen:#007700; --yellow:#ffcc00;
+            --dark:#1a1a1a; --light:#f9f9f9; --gray:#eee;
+        }
+        body {line-height:1.6; color:#333; background:#fff;}
+        
+        /* Header */
+        header {background:linear-gradient(135deg, #005500, #009900); color:white; padding:1rem 2rem; position:sticky; top:0; z-index:100; box-shadow:0 2px 10px rgba(0,0,0,0.2);}
+        .nav-container {max-width:1200px; margin:0 auto; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap;}
+        .logo {font-size:1.8rem; font-weight:bold; display:flex; align-items:center; gap:10px;}
+        .logo span {color:var(--yellow);}
+        nav ul {display:flex; gap:2rem; list-style:none; flex-wrap:wrap;}
+        nav a {color:white; text-decoration:none; font-weight:500; transition:0.3s;}
+        nav a:hover {color:var(--yellow);}
+        
+        /* Hero Section */
+        .hero {background:linear-gradient(rgba(0,60,0,0.8), rgba(0,80,0,0.7)); color:white; padding:5rem 2rem; text-align:center; position:relative; overflow:hidden;}
+        .hero::before {content:""; position:absolute; top:0; left:0; right:0; bottom:0; background:url('') center/contain no-repeat; opacity:0.1;}
+        .hero > * {position:relative; z-index:1;}
+        .hero h1 {font-size:2.5rem; margin-bottom:1rem;}
+        .hero p {font-size:1.2rem; max-width:700px; margin:0 auto 2rem;}
+        .btn {display:inline-block; padding:0.8rem 2rem; border-radius:6px; text-decoration:none; font-weight:bold; transition:0.3s; margin:0.5rem;}
+        .btn-yellow {background:var(--yellow); color:var(--dark);}
+        .btn-yellow:hover {background:#ffdd33; transform:scale(1.05);}
+        .btn-white {background:white; color:var(--green);}
+        
+        /* Plans Section */
+        .plans {padding:4rem 2rem; background:var(--light);}
+        .section-title {text-align:center; font-size:2rem; margin-bottom:3rem; color:var(--dark);}
+        .plans-grid {max-width:1000px; margin:0 auto; display:grid; grid-template-columns:repeat(auto-fit, minmax(300px, 1fr)); gap:2rem;}
+        .plan-card {background:white; border-radius:12px; padding:2rem; text-align:center; box-shadow:0 5px 20px rgba(0,0,0,0.1); transition:0.3s; border-top:4px solid var(--green);}
+        .plan-card:hover {transform:translateY(-5px); box-shadow:0 10px 30px rgba(0,0,0,0.15);}
+        .plan-card.featured {border-top:4px solid var(--yellow); transform:scale(1.03);}
+        .plan-speed {font-size:2.5rem; font-weight:bold; color:var(--green); margin-bottom:0.5rem;}
+        .plan-price {font-size:1.8rem; font-weight:bold; margin-bottom:1rem;}
+        .plan-desc {color:#666; margin-bottom:1.5rem;}
+        .plan-btn {background:var(--green); color:white;}
+        .plan-btn:hover {background:var(--darkgreen); color:white;}
+        
+        /* Features */
+        .features {padding:4rem 2rem; max-width:1200px; margin:0 auto;}
+        .features-grid {display:grid; grid-template-columns:repeat(auto-fit, minmax(250px, 1fr)); gap:2rem;}
+        .feature {text-align:center; padding:1.5rem;}
+        .feature-icon {font-size:3rem; margin-bottom:1rem;}
+        
+        /* Installation Form Section */
+        .form-section {padding:4rem 2rem; background:var(--light);}
+        .form-container {max-width:600px; margin:0 auto; background:white; padding:2.5rem; border-radius:12px; box-shadow:0 5px 20px rgba(0,0,0,0.1);}
+        .form-group {margin-bottom:1.2rem;}
+        .form-group label {display:block; margin-bottom:0.5rem; font-weight:600;}
+        .form-group input, .form-group textarea, .form-group select {width:100%; padding:0.8rem; border:1px solid #ddd; border-radius:6px; font-size:1rem;}
+        .form-group input:focus, .form-group textarea:focus {outline:none; border-color:var(--green);}
+        .submit-btn {background:var(--green); color:white; border:none; cursor:pointer; width:100%; font-size:1.1rem; padding:1rem;}
+        .submit-btn:hover {background:var(--darkgreen);}
+        
+        /* Contact */
+        .contact {padding:4rem 2rem; background:var(--dark); color:white; text-align:center;}
+        .contact-info {max-width:600px; margin:0 auto; font-size:1.1rem;}
+        .contact-info p {margin:0.8rem 0;}
+        
+        /* Footer */
+        footer {background:#000; color:#888; text-align:center; padding:2rem; font-size:0.9rem;}
+        
+        /* Responsive */
+        @media(max-width:768px){
+            nav ul {gap:1rem; margin-top:1rem;}
+            .hero h1 {font-size:1.8rem;}
+            .plan-card.featured {transform:none;}
+        }
+    </style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+    <div class="nav-container">
+        <div class="logo">
+            PALMA <span>IMTECH</span>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#plans">Plans</a></li>
+                <li><a href="#apply">Apply</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<!-- HERO SECTION -->
+<section class="hero" id="home">
+    <h1>Welcome to PALMA IMTECH</h1>
+    <p>Reliable • Fast • Pure Fiber Internet Connection<br>
+    Serving Midsayap, Cotabato & Neighboring Areas</p>
+    <a href="#plans" class="btn btn-yellow">View Plans</a>
+    <a href="#apply" class="btn btn-white">Apply Now</a>
+</section>
+
+<!-- PLANS SECTION -->
+<section class="plans" id="plans">
+    <h2 class="section-title">📡 Choose Your Plan</h2>
+    <div class="plans-grid">
+        <!-- Plan 1 -->
+        <div class="plan-card">
+            <h3>STANDARD</h3>
+            <div class="plan-speed">150 Mbps</div>
+            <div class="plan-price">₱1,000.00<span style="font-size:1rem; color:#666;">/month</span></div>
+            <p class="plan-desc">Perfect for families • Streaming • Online Class</p>
+            <ul style="text-align:left; margin-bottom:1.5rem; padding-left:1.5rem;">
+                <li>✅ Unlimited Data</li>
+                <li>✅ Free Installation*</li>
+                <li>✅ WiFi Router Included</li>
+                <li>✅ 24/7 Technical Support</li>
+            </ul>
+            <a href="#apply" class="btn plan-btn">Subscribe Now</a>
+        </div>
+
+        <!-- Plan 2 - Featured -->
+        <div class="plan-card featured">
+            <h3 style="color:#cc8800;">⭐ RECOMMENDED</h3>
+            <div class="plan-speed">250 Mbps</div>
+            <div class="plan-price">₱1,299.00<span style="font-size:1rem; color:#666;">/month</span></div>
+            <p class="plan-desc">High-Speed • Gaming • Multiple Devices</p>
+            <ul style="text-align:left; margin-bottom:1.5rem; padding-left:1.5rem;">
+                <li>✅ Unlimited Data</li>
+                <li>✅ Free Installation*</li>
+                <li>✅ Premium Dual-Band Router</li>
+                <li>✅ Priority Support</li>
+                <li>✅ Faster Upload & Download</li>
+            </ul>
+            <a href="#apply" class="btn plan-btn">Subscribe Now</a>
+        </div>
+    </div>
+</section>
+
+<!-- FEATURES -->
+<section class="features">
+    <h2 class="section-title">Why Choose PALMA IMTECH?</h2>
+    <div class="features-grid">
+        <div class="feature">
+            <div class="feature-icon">🔌</div>
+            <h3>Pure Fiber Connection</h3>
+            <p>Stable connection even during peak hours</p>
+        </div>
+        <div class="feature">
+            <div class="feature-icon">🛠️</div>
+            <h3>Local Support Team</h3>
+            <p>Fast response — technicians based in Midsayap</p>
+        </div>
+        <div class="feature">
+            <div class="feature-icon">💰</div>
+            <h3>Transparent Pricing</h3>
+            <p>No hidden charges — what you see is what you pay</p>
+        </div>
+        <div class="feature">
+            <div class="feature-icon">📅</div>
+            <h3>Flexible Billing</h3>
+            <p>Choose your preferred billing date: 15th or 30th of the month</p>
+        </div>
+    </div>
+</section>
+
+<!-- INSTALLATION FORM -->
+<section class="form-section" id="apply">
+    <h2 class="section-title">📋 Installation Application Form</h2>
+    <div class="form-container">
+        <form action="#" method="post">
+            <div class="form-group">
+                <label for="name">Client Name *</label>
+                <input type="text" id="name" name="name" required placeholder="Enter your full name">
+            </div>
+            
+            <div class="form-group">
+                <label for="contact">Contact No. *</label>
+                <input type="tel" id="contact" name="contact" required placeholder="e.g. 0917 123 4567">
+            </div>
+            
+            <div class="form-group">
+                <label for="address">Complete Address *</label>
+                <textarea id="address" name="address" rows="3" required placeholder="House No., Street, Barangay, Municipality, Province"></textarea>
+            </div>
+            
+            <div class="form-group">
+                <label for="landmark">Near Landmark</label>
+                <input type="text" id="landmark" name="landmark" placeholder="Famous building, church, or store near your place">
+            </div>
+            
+            <div class="form-group">
+                <label for="plan">Select Monthly Plan *</label>
+                <select id="plan" name="plan" required>
+                    <option value="">-- Choose a Plan --</option>
+                    <option value="150mbps">150 Mbps — ₱1,000.00 / month</option>
+                    <option value="250mbps">250 Mbps — ₱1,299.00 / month</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label>Preferred Billing Date *</label>
+                <select name="billing_date" required>
+                    <option value="">-- Select --</option>
+                    <option value="15">15th of the Month</option>
+                    <option value="30">30th of the Month</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="schedule">Preferred Installation Date / Time</label>
+                <input type="text" id="schedule" name="schedule" placeholder="e.g. Oct 10, 2026 — Morning">
+            </div>
+            
+            <div class="form-group">
+                <label for="notes">Special Notes / Instructions</label>
+                <textarea id="notes" name="notes" rows="2" placeholder="Any other info we should know"></textarea>
+            </div>
+            
+            <button type="submit" class="btn submit-btn">✅ Submit Application</button>
+        </form>
+    </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+    <h2>📍 Contact Us</h2>
+    <div class="contact-info">
+        <p><strong>Office Address:</strong> Poblacion 8, Midsayap, North Cotabato</p>
+        <p><strong>Mobile:</strong> 09360326250</p>
+        <p><strong>Facebook:</strong> @PalmaIMTECH</p>
+        <p><strong>Email:</strong> palmaimtech@gmail.com</p>
+        <br>
+        <p>📞 Message us on Facebook Messenger for fastest reply!</p>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <p><strong>PALMA IMTECH SOLUTIONS</strong><br>
+    Reliable • Fast • Pure Fiber Internet Connection</p>
+    <p>&copy; 2026 PALMA IMTECH. All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>
